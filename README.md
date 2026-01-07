@@ -5,11 +5,11 @@ Bu proje benim Nesneye Yönelik Programlama dersi için hazırladığım final �
 ## Projeyi Nasıl Tasarladım?
 
 Kodları yazarken derste gördüğümüz şu mevzulara dikkat ettim:
-- **Kapsülleme (Encapsulation):** Mesela araba fiyatını veya ehliyet yılını herkes kafasına göre değiştiremesin diye `set` bloklarına kontroller koydum. Eksi fiyat girilirse sistem hata vermesin diye taban fiyat atadım.
+- **Kapsülleme :** Mesela araba fiyatını veya ehliyet yılını herkes kafasına göre değiştiremesin diye `set` bloklarına kontroller koydum. Eksi fiyat girilirse sistem hata vermesin diye taban fiyat atadım.
 - **Otomatik Hesaplamalar:** Arabanın yaşını veya adamın kaç yıllık şoför olduğunu elle girmekle uğraşmadım; sistemin yılından üretim yılını çıkarıp otomatik hesaplattım.
 - **Kiralama Mantığı:** Kiralama işini direkt sınıfların içine gömmek yerine `KiralamaServisi` diye bir yer yaptım. Bütün kontrolü orası yapıyor (ehliyet süresi yetiyor mu, araba boş mu vb.).
 
-## Dürüstlük Köşesi: Yapay Zeka (AI) Kullanımı
+##  Yapay Zeka  Kullanımı
 
 Hocam, bu projeyi geliştirirken takıldığım yerlerde ve bazı hataları çözmekte Gemini gibi yapay zeka araçlarından destek aldım. Bunu belirtmek istedim çünkü:
 
