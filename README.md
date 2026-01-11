@@ -1,23 +1,22 @@
-# SWE203 Araç Kiralama Projesi
+# SWE203 Araç Kiralama Projesi - Mustafa Efe Cebel
 
-Bu proje benim Nesneye Yönelik Programlama dersi için hazırladığım final ödevim. C# kullanarak basit ama mantıklı bir araç kiralama sistemi kurmaya çalıştım.
+Hocam merhaba, bu proje benim Nesneye Yönelik Programlama dersi için hazırladığım final çalışmasıdır. Projenin amacı, bir araç kiralama sürecini kod üzerinden simüle etmektir.
 
-## Projeyi Nasıl Tasarladım?
+## Kod Yapısını Nasıl Kurdum?
 
-Kodları yazarken derste gördüğümüz şu mevzulara dikkat ettim:
-- **Kapsülleme :** Mesela araba fiyatını veya ehliyet yılını herkes kafasına göre değiştiremesin diye `set` bloklarına kontroller koydum. Eksi fiyat girilirse sistem hata vermesin diye taban fiyat atadım.
-- **Otomatik Hesaplamalar:** Arabanın yaşını veya adamın kaç yıllık şoför olduğunu elle girmekle uğraşmadım; sistemin yılından üretim yılını çıkarıp otomatik hesaplattım.
-- **Kiralama Mantığı:** Kiralama işini direkt sınıfların içine gömmek yerine `KiralamaServisi` diye bir yer yaptım. Bütün kontrolü orası yapıyor (ehliyet süresi yetiyor mu, araba boş mu vb.).
+Projeyi 4 ana dosya üzerinden kurguladım:
+* **Araba.cs:** Araçların model, marka ve fiyat bilgilerini tuttuğum yer. Burada fiyatların hatalı girilmemesi için basit bir kontrol mekanizması (Kapsülleme) kullandım.
+* **Musteri.cs:** Müşterinin ehliyet tecrübesini tutuyor. Tecrübe yılını elle girmek yerine, sistemin yılından ehliyet alış yılını çıkararak hesaplattım.
+* **KiralamaServisi.cs:** Burası işin mutfağı. Aracın uygun olup olmadığını ve müşterinin tecrübesinin yetip yetmediğini kontrol eden sınıf burasıdır.
+* **Program.cs:** Yazdığım bu sınıfları test ettiğim ana ekran.
 
-##  Yapay Zeka  Kullanımı
+## Geliştirme Sürecim Hakkında
 
-Hocam, bu projeyi geliştirirken takıldığım yerlerde ve bazı hataları çözmekte Gemini gibi yapay zeka araçlarından destek aldım. Bunu belirtmek istedim çünkü:
+Ödevi yaparken özellikle tarih hesaplamaları ve sınıflar arası bağlantı kurma kısımlarında bazı hatalar aldım. Bu hataları çözmek ve mantığı daha iyi oturtmak için yapay zekadan (Gemini) yardım aldım. 
 
-1. Kendi yazdığım kodlarda bazen "syntax" hataları aldım, bunları nasıl düzelteceğimi AI sayesinde hızlıca öğrendim.
-2. Yazdığım mantığın (mesela ehliyet yılı kontrolü) daha sağlam olması için "Şöyle bir senaryoda bu kod patlar mı?" diye yapay zekaya danıştım ve hatalarımı düzelttim.
-3. Bazı yerlerde kodun daha temiz görünmesi için tavsiyeler aldım.
+Aldığım bu yardımı; kodun mantığını anlamak, syntax (yazım) hatalarımı düzeltmek ve daha temiz bir kod yapısı oluşturmak için bir "öğrenme asistanı" gibi kullandım. Bu sayede takıldığım noktaları nasıl çözeceğimi öğrenmiş oldum.
 
-Kısacası; kodun temelini ve mantığını ben kurdum, yapay zekayı ise yanımda duran bir asistan veya hata ayıklayıcı gibi kullandım. Bu sayede takıldığım yerleri başkasına sormak yerine araştırarak ve sorarak kendim çözmüş oldum. Şu an kodun neresinde ne dönüyor hepsine hakimim.
-
+---
+**Çalıştırma Notu:** `Program.cs` dosyası üzerinden projeyi başlatabilirsiniz. Örnek bir kiralama senaryosu konsol ekranında görünecektir.
 ## Nasıl Çalıştırılır?
 `Program.cs` dosyasını açıp F5'e basmanız yeterli. İçeride örnek bir müşteri ve araba tanımladım, sistem otomatik olarak kiralama yapıp yapamayacağınızı ekrana yazıyor.
